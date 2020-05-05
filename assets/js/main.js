@@ -142,25 +142,31 @@
                 url: $(this).attr('action') || window.location.pathname,
                 type: "POST",
                 data: $(this).serialize(),
+                dataType: "json",
                 success: function (data) {
-                    if (data.status === "success") {
-                        alert("Message successfully sent.");
-                        $('#contact-form').each(function () {
-                            this.reset();
-                        });
-                    } else {
-                        alert("Some error occurred, please send a message by mail.");
-                    }
-                },
-                error: function (jXHR, textStatus, errorThrown) {
-                    alert("Some error occurred, please send a message by mail.");
+                    alert("Message successfully sent.");
+                    $('#contact-form').each(function () {
+                        this.reset();
+                    });
+                    // if (data.status === "success") {
+                    //     alert("Message successfully sent.");
+                    //     $('#contact-form').each(function () {
+                    //         this.reset();
+                    //     });
+                    // } else {
+                    //     alert("Some error occurred, please send a message by mail.");
+                    // }
                 }
+                // error: function (jXHR, textStatus, errorThrown) {
+                //     alert("Some error occurred, please send a message by mail.");
+                // }
             });
+            return false;
         });
     });
 
     let userAgent = navigator.userAgent;
-    if (userAgent.match(/(iPad|iPhone|iPod)/i) || userAgent.indexOf("MSIE ") > -1 || userAgent.indexOf("Trident/") > -1 || userAgent.indexOf("Edge") > -1){
+    if (userAgent.match(/(iPad|iPhone|iPod)/i) || userAgent.indexOf("MSIE ") > -1 || userAgent.indexOf("Trident/") > -1 || userAgent.indexOf("Edge") > -1) {
         $("#view-projects-container").css("display", "none");
         $("#view-projects-container-alt").css("display", "block");
     }

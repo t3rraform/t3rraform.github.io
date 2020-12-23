@@ -146,7 +146,7 @@
             $.ajax({
                 url: $(this).attr('action') || window.location.pathname,
                 type: "POST",
-                data: $(this).serialize(),
+                data: $(this).find("input, textarea[name!='g-recaptcha-response']").serialize(),
                 dataType: "json",
                 success: function (data) {
                     alert("Message successfully sent.");
@@ -155,7 +155,7 @@
                     });
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
-                    alert("Some error occurred, please send a message by mail.");
+                    alert("Error occurred with form provider, please send a message by mail.");
                     console.log("jqXHR: " + jqXHR + ", textStatus: " + textStatus + ", errorThrown: " + errorThrown)
                 }
             });

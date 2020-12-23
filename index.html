@@ -31,7 +31,8 @@
                                                      class="button scrolly not-supported"
                                                      id="view-projects-btn"><span>Show Projects</span></a></div>
 
-                <div id="view-projects-container-alt"><a href="#projects" class="button scrolly" id="view-projects-btn-alt"></a></div>
+                <div id="view-projects-container-alt"><a href="#projects" class="button scrolly"
+                                                         id="view-projects-btn-alt"></a></div>
             </li>
 
         </ul>
@@ -43,7 +44,7 @@
         <section id="one" class="box special" style="padding-top:2em;padding-bottom:1em;">
             <header class="major">
                 <h2 style="text-align:center;margin-bottom:45px;">About me</h2>
-                <p>I'm a Software engineer with about 3 years of professional experience as a developer. I've
+                <p>I'm a Software engineer with over 3 years of professional experience as a developer. I've
                     started as a<br> self taught coder with my own projects.
                     My main focus is working with backend and object-oriented programming languages like Java. I
                     also have expertise in working with Full stack and mobile applications.</p>
@@ -206,26 +207,32 @@
                     <section class="box special">
                         <a class="image featured" href="images/musicplayer/Playlist.png"><img
                                 src="images/Musicplayer.png" alt=""/>
-                            <p class="caption-text-alt">The standard functionality like managing playlists and songs in them, searching songs, shuffling. The time slider shows the selected song's audio visually.</p></a>
+                            <p class="caption-text-alt">The standard functionality like managing playlists and songs in
+                                them, searching songs, shuffling. The time slider shows the selected song's audio
+                                visually.</p></a>
                         <a class="image featured" href="images/musicplayer/Fullscreen.png"
                            style="display:none"><img src="images/musicplayer/Fullscreen.png" alt=""/>
-                            <p class="caption-text-alt">The user interface is responsive and the title bar is custom.</p></a>
+                            <p class="caption-text-alt">The user interface is responsive and the title bar is
+                                custom.</p></a>
                         <a class="image featured" href="images/musicplayer/Local%20drive.png"
                            style="display:none"><img src="images/musicplayer/Local%20drive.png" alt=""/>
-                            <p class="caption-text-alt">Upload songs from local drive folder to selected playlist by either selecting the folder or dragging it to the window.</p></a>
+                            <p class="caption-text-alt">Upload songs from local drive folder to selected playlist by
+                                either selecting the folder or dragging it to the window.</p></a>
                         <a class="image featured" href="images/musicplayer/Youtube.png"
                            style="display:none"><img src="images/musicplayer/Youtube.png" alt=""/>
-                            <p class="caption-text-alt">Search and download songs from youtube completely asynchronous, the status icon indicates the progress.</p></a>
+                            <p class="caption-text-alt">Search and download songs from youtube completely asynchronous,
+                                the status icon indicates the progress.</p></a>
                         <a class="image featured" href="images/musicplayer/Youtube step 2.png"
                            style="display:none"><img src="images/musicplayer/Youtube step 2.png" alt=""/>
-                            <p class="caption-text-alt">The downloaded song will go to your selected local drive folder/youtube/ then it can be added to selected playlist.</p></a>
+                            <p class="caption-text-alt">The downloaded song will go to your selected local drive
+                                folder/youtube/ then it can be added to selected playlist.</p></a>
                         <h3>Music player</h3>
                         <p class="project-description">A project from my school's UX course revisited and overhauled.
                             Fully functional with essential features, waveform timeline and youtube integrated.
-                             <br><br></p>
-                                                <a data-poptrox="ignore" href="https://github.com/t3rraform/musicplayer"
-                                                   class="icon brands fa-github project-git"><span
-                                                        class="label">Github</span></a>
+                            <br><br></p>
+                        <a data-poptrox="ignore" href="https://github.com/t3rraform/musicplayer"
+                           class="icon brands fa-github project-git"><span
+                                class="label">Github</span></a>
                         <div class="stack-container">
                             <sub>Java</sub>
                             <sub>JavaFX</sub>
@@ -281,27 +288,34 @@
         <section id="contact-container" class="container">
             <div class="box" style="text-align:center">
                 <h2>Contact</h2>
-                <p>Get in touch with me, I'm not looking for freelance work however I'm open for <br> opportunities or
-                    ideas.
+                <p>Get in touch with me, I'm currently not looking for a job or to buy services however I'm open for<br>
+                    opportunities or ideas.
                     Use this form or mail for your enquiries.
                 </p>
 
                 <form method="POST" id="contact-form" action="https://formspree.io/mgenende/">
                     <div class="row gtr-50 gtr-uniform">
-                        <div class="col-6 col-12-mobilep">
+                        <div class="col-6 col-12-mobilep name-input-container">
                             <input type="text" name="name" id="name" value="" placeholder="Name"/>
                         </div>
-                        <div class="col-6 col-12-mobilep">
+                        <div class="col-6 col-12-mobilep email-input-container">
                             <input type="email" name="email" id="email" value="" placeholder="Email"/>
                         </div>
                         <div class="col-12">
                             <textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
                         </div>
                         <div class="col-12">
-                            <ul class="actions special">
-                                <li><input type="submit" value="Send Message"/></li>
-                                <!--                    <div class="g-recaptcha" data-sitekey="6Lfv7ugUAAAAAPuNpMM9HDO4Uyi-xPUSDH97R7Tc"></div>-->
-                            </ul>
+                            <div class="row gtr-50 gtr-uniform">
+                                <div class="col-6 send-message-btn-container">
+                                    <input class="send-message-btn" type="submit" value="Send Message"/>
+                                </div>
+                                <div class="col-6 g-recaptcha-container">
+                                    <div class="g-recaptcha"
+                                         data-sitekey="6Lfv7ugUAAAAAPuNpMM9HDO4Uyi-xPUSDH97R7Tc">
+                                    </div>
+                                </div>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </form>

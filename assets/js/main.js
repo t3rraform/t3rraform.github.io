@@ -138,6 +138,11 @@
     $(document).ready(function () {
         $('#contact-form').on('submit', function (e) {
             e.preventDefault();
+            let captchaResponse = grecaptcha.getResponse();
+            if(captchaResponse.length === 0){
+                alert("Please verify reCAPTCHA.");
+                return false;
+            }
             $.ajax({
                 url: $(this).attr('action') || window.location.pathname,
                 type: "POST",
@@ -148,18 +153,11 @@
                     $('#contact-form').each(function () {
                         this.reset();
                     });
-                    // if (data.status === "success") {
-                    //     alert("Message successfully sent.");
-                    //     $('#contact-form').each(function () {
-                    //         this.reset();
-                    //     });
-                    // } else {
-                    //     alert("Some error occurred, please send a message by mail.");
-                    // }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    alert("Some error occurred, please send a message by mail.");
+                    console.log("jqXHR: " + jqXHR + ", textStatus: " + textStatus + ", errorThrown: " + errorThrown)
                 }
-                // error: function (jXHR, textStatus, errorThrown) {
-                //     alert("Some error occurred, please send a message by mail.");
-                // }
             });
             return false;
         });

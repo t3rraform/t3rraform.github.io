@@ -139,7 +139,7 @@
         $('#contact-form').on('submit', function (e) {
             e.preventDefault();
             let captchaResponse = grecaptcha.getResponse();
-            if(captchaResponse.length === 0){
+            if (captchaResponse.length === 0) {
                 alert("Please verify reCAPTCHA.");
                 return false;
             }
@@ -162,6 +162,10 @@
             return false;
         });
     });
+
+    let thisYear = new Date().getFullYear();
+    $("#copyright-year").text(thisYear);
+    $("#years-of-experience").text(thisYear - 2018);
 
     let userAgent = navigator.userAgent;
     if (userAgent.match(/(iPad|iPhone|iPod)/i) || userAgent.indexOf("MSIE ") > -1 || userAgent.indexOf("Trident/") > -1 || userAgent.indexOf("Edge") > -1) {

@@ -2,10 +2,13 @@
 <html>
 <head>
     <title>Eric Karlsson's Portfolio</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="assets/css/main.css"/>
-
 </head>
 <body class="landing is-preload">
 <div id="page-wrapper">
@@ -44,7 +47,7 @@
         <section id="one" class="box special" style="padding-top:2em;padding-bottom:1em;">
             <header class="major">
                 <h2 style="text-align:center;margin-bottom:45px;">About me</h2>
-                <p>I'm a Software engineer with over 3 years of professional experience as a developer. I've
+                <p>I'm a Software engineer with over <span id="years-of-experience"></span> years of professional experience as a developer. I've
                     started as a<br> self taught coder with my own projects.
                     My main focus is working with backend and object-oriented programming languages like Java. I
                     also have expertise in working with Full stack and mobile applications.</p>
@@ -334,7 +337,7 @@
                     class="label">Github</span></a></li>
         </ul>
         <ul class="copyright">
-            <li>&copy; Eric Karlsson 2020 &nbsp;|&nbsp; Built using HTML5 Up</li>
+            <li>&copy; Eric Karlsson <span id="copyright-year"></span> &nbsp;|&nbsp; Built using HTML5 Up</li>
             <!--            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>-->
         </ul>
     </footer>
